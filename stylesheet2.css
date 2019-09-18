@@ -1,0 +1,442 @@
+/*cssリセット*/
+
+html,body,h1,h2,h3,h4,ul,ol,dl,li,dt,dd,p,div,span,img,a,table,tr,th,td {
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+article,
+header,
+footer,
+aside,
+figure,
+figcaption,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+main {
+  display:block; /* for IE11 */
+}
+
+
+/*共通　開始*/
+body{
+  font-family : serif;
+  margin-top: 0;
+}
+
+header,footer{
+  width : 100%;
+}
+
+nav,main{
+  width:80%;
+  margin : 60px auto 0;
+}
+
+main{
+  text-align: center;
+  padding-bottom: 15px;
+}
+/*共通　終了*/
+
+/*要素の確認*/
+main,.contact,footer{
+  border : 1px solid#000;
+}
+/*header 開始*/
+
+
+#menu{
+  display: none;
+  margin : auto 0 auto;
+  max-width: 960px;
+}
+
+#menu ul{
+  margin : 60px;
+  padding :0;
+  list-style-type: none;
+}
+
+#menu li{
+  padding : 8px 0 8px 0;
+  color : #9966cc;
+  border-bottom :1px solid #000 ;
+}
+
+#open-btn{
+  cursor : pointer;
+}
+
+.header-icon{
+  position :absolute;
+  left : 50%;
+  top :0;
+  transform: translateX(-50%)
+}
+
+.menu-icon{
+  position: absolute;
+  top: 20px;
+  left:20px;
+  color : #9966cc;
+}
+
+/*header 終了*/
+
+/*main start*/
+.jump-to-top{
+  position : fixed;
+  right: 30px;
+  bottom : 20px;
+
+}
+
+.jump-to-btn{
+  color: #ffccff;
+  transition: color ease 0.5s;
+}
+
+.jump-to-btn:hover{
+  color : #ff9933;
+
+}
+
+/*main photo start*/
+.main-images{
+  margin : 30px auto;
+  width : 100%;
+  background-color: #  ;
+
+}
+/*ボタンでスライドする*/
+/*
+.image-box{
+  border : 1px solid#999933  ;
+}
+
+.prev-btn{
+  color :#bdb76b;
+}
+
+.next-btn{
+  color : #bdb76b;
+}
+
+.slide-nav{
+  display: inline-block;
+}
+
+.toolbar{
+  overflow: hidden;
+  text-align: center;
+}
+
+#prev{
+  float:left;
+  width : 40px;
+  height: 40px;
+}
+
+#next{
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+*/
+
+/*スライドショー*/
+#slideshow {
+  list-style-type: none;
+  pointer-events: none;
+  position: relative;
+
+}
+
+#slideshow > li {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s;
+
+}
+
+#slideshow > li.current {
+  opacity: 1;
+}
+
+.main-images ul{
+  width : 90%;
+  height: 400px;
+  margin: 0 auto;
+  border : 1px solid#999933;
+
+}
+
+.main-images li{
+  width: 100%;
+}
+
+.main-images h3{
+  text-shadow: 2px 2px 0 #f5deb3;
+  padding-bottom: 20px;
+  margin-top: 15px;
+}
+
+img{
+  max-width: 100%;
+}
+/*main photo end*/
+
+/*main accordion start*/
+.accordion{
+  max-width : 400px;
+  margin : 0 auto 20px;
+  border-radius: 6px;
+
+}
+
+.accordion .opensection{
+  height : 40px;
+  line-height: 40px;
+  padding : 0 40px 0 8px;
+  position : relative;
+  color : #2e8b57;
+  cursor:pointer;
+  transition-delay: 0.2s;
+  border: 1px solid#d3d3d3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+}
+
+.accordion .slide-item1,.slide-item2,.slide-item3{
+  position: absolute;
+  top : 5px;
+  left : 180px;
+  bottom : 5px;
+}
+
+.accordion .slide-down{
+  position: absolute;
+  bottom: 10px;
+  right : 8px;
+  transform: rotate(0deg);
+  transition-duration: 0.3s;
+}
+
+.accordion .closesection{
+  display:none;
+  line-height: 30px;
+  color:#000;
+  border: 1px solid#bdb76b;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.accordion.show .slide-down{
+  transform: rotate(180deg);
+  transition-duration: 0.3s;
+}
+
+.accordion .opensection:hover{
+  background-color: #228b22;
+  color:#fff;
+}
+
+.accordion h3{
+  font-weight:bold;
+  text-shadow: 2px 2px 0 #f5deb3;
+}
+
+/*main accordion end*/
+
+/*main animation start*/
+.frame1{
+  float: left;
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.animation-frame{
+  width: 100%;
+  height : 150px;
+  background-image: url("Photo/image1.jpg");
+  border: 1px solid#ddd;
+  border-radius: 10px;
+
+}
+
+.animation{
+  background-color: #fff;
+  width: 100%;
+  height: 150px;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 150px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.animation:hover{
+  animation: action linear 0.5s ;
+  animation-fill-mode: forwards;
+}
+
+.animation a{
+  text-decoration: none;
+  color : #556b2f;
+}
+
+.my-icon{
+  color :#556b2f;
+}
+
+@keyframes action{
+  from{
+    border-radius: 0;
+    background: rgba(255,255,255,1.0);
+    width : 100%;
+    height : 150px;
+    margin-top: 0;
+    margin-left: 0;
+    line-height: 150px;
+    text-align: center;
+  }
+  to{
+    border-radius: 30px;
+    background: rgba(255,255,255,0.8);
+    width : 90%;
+    height : 120px;
+    margin-top : 18px;
+    margin-left: 15px;
+    line-height: 120px;
+    text-align: center;
+  }
+}
+
+.frame1,.frame2{
+  overflow: hidden;
+}
+/*main animation end*/
+/*main end*/
+
+/*contacct start*/
+.contact{
+  background-color: #008080;
+  text-align: center;
+}
+
+.contact-heading{
+  color:#fff;
+
+}
+
+.contact-heading h3{
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom : 10px;
+  font-weight: bold;
+}
+
+.contact-heading p{
+  font-size: 10px;
+  padding-bottom : 10px;
+}
+
+.paragraph{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border : 1px solid#f5deb3;
+  border-radius: 20px;
+  width: 150px;
+  margin : 0 auto 10px;
+}
+
+.paragraph a{
+  text-decoration: none;
+  color: #228b22;
+  font-weight: bold;
+}
+/*contact end*/
+
+/*footer start*/
+footer{
+  height: 250px;
+  text-align: center;
+}
+
+.footerlogo{
+  margin : 20px;
+}
+
+.twitter-icon,.facebook-icon,.insta-icon,.youtube-icon{
+  font-family: "Font Awesome 5 Brands";
+  padding: 10px;
+  border : 1px solid #000;
+  border-radius: 25px;
+  margin : 10px;
+  background-color: #000;
+}
+
+.twitter-icon{
+  color: #fff;
+}
+
+.facebook-icon{
+  color:#fff;
+}
+
+.insta-icon{
+  color:#fff;
+}
+
+.youtube-icon{
+  color: #fff;
+}
+
+.twitter-icon:hover{
+  color :#33ccff;
+}
+
+.facebook-icon:hover{
+  color : #3366ff;
+}
+
+.insta-icon:hover{
+ color :#cc66cc;
+}
+
+.youtube-icon:hover{
+  color:red;
+}
+
+.footsns{
+  overflow: hidden;
+}
+
+.list{
+  float:left;
+  width:25%
+}
+/*footer end*/
